@@ -86,7 +86,12 @@ class mainPanel extends React.Component {
     return (
       <div className='container'>
         <div className='row'>
-          {this.navs(tab)}
+          <button className='navbar-toggler hidden-sm-up' type='buttom' data-toggle='collapse' data-target='#collaspable-navbar'>
+            &#9776;
+          </button>
+          <div className='collapse nav-togglable-xs' id='collaspable-navbar'>
+            {this.navs(tab)}
+          </div>
         </div>
         <div className='row' style={{paddingBottom: '70px'}}>
           {body}
